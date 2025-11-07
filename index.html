@@ -1,126 +1,112 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lys Liliales</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300&display=swap');
-
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(180deg, #ffeaf2 0%, #fff6fa 100%);
-      overflow-x: hidden;
-      text-align: center;
-      animation: fadeIn 1.5s ease-in;
+      font-family: "Poppins", cursive;
+      background: linear-gradient(180deg, #ffd9e8 0%, #ffe6f2 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
       position: relative;
-      min-height: 100vh;
     }
 
     h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 65px;
-      color: #d84f87;
-      margin-top: 100px;
-      animation: float 4s ease-in-out infinite;
+      font-family: "Great Vibes", cursive;
+      font-size: 4rem;
+      color: #d63384;
+      text-shadow: 1px 1px 4px #fff;
+      z-index: 2;
+      animation: fadeInDown 2s ease;
     }
 
-    p {
-      font-size: 18px;
-      color: #b45a7e;
-      margin-top: -10px;
-      margin-bottom: 50px;
+    .flower-bg {
+      position: absolute;
+      top: -50px;
+      width: 400px;
+      opacity: 0.3;
+      z-index: 1;
+      animation: float 6s ease-in-out infinite;
     }
 
     .links {
       display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+      z-index: 2;
+      animation: fadeInUp 2s ease;
     }
 
-    .links a {
-      background-color: #f7b6ce;
+    .link-btn {
+      background-color: #ffb6c1;
       color: white;
+      border: none;
+      padding: 12px 40px;
+      border-radius: 50px;
+      font-size: 1.2rem;
       text-decoration: none;
-      padding: 12px 30px;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: 0.3s;
-      box-shadow: 0 4px 10px rgba(216, 79, 135, 0.2);
-      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(255, 182, 193, 0.4);
     }
 
-    .links a:hover {
-      background-color: #d84f87;
+    .link-btn:hover {
+      background-color: #ff94af;
       transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(216, 79, 135, 0.3);
-    }
-
-    .flower {
-      position: absolute;
-      width: 180px;
-      opacity: 0.95;
-      animation: sway 6s ease-in-out infinite;
-    }
-
-    .left {
-      left: 0;
-      bottom: 0;
-    }
-
-    .right {
-      right: 0;
-      bottom: 0;
-      transform: scaleX(-1);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      box-shadow: 0 6px 12px rgba(255, 182, 193, 0.6);
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10px);
+      }
     }
 
-    @keyframes sway {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    footer {
-      margin-top: 70px;
-      font-size: 14px;
-      color: #c07296;
-      opacity: 0.8;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- زهور الزنبق -->
-  <img src="https://i.imgur.com/E7dAxhK.png" alt="Lys Flower Left" class="flower left">
-  <img src="https://i.imgur.com/E7dAxhK.png" alt="Lys Flower Right" class="flower right">
-
-  <!-- العنوان -->
+  <img class="flower-bg" src="https://cdn.pixabay.com/photo/2020/04/20/18/37/lily-5067884_1280.png" alt="Fleur de lys rose" />
   <h1>Lys Liliales</h1>
-  <p>Créations de cadres, stickers & cadeaux personnalisés</p>
-
-  <!-- الروابط -->
   <div class="links">
-    <a href="https://www.facebook.com/share/1J3rsf5M64/" target="_blank">Facebook</a>
-    <a href="https://www.instagram.com/creation.de.lys?igsh=MXcxNHcyYjEzZGhoZw==" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@lyscreation03" target="_blank">TikTok</a>
+    <a class="link-btn" href="https://www.facebook.com/share/1J3rsf5M64/" target="_blank">Facebook</a>
+    <a class="link-btn" href="https://www.instagram.com/creation.de.lys?igsh=MXcxNHcyYjEzZGhoZw==" target="_blank">Instagram</a>
+    <a class="link-btn" href="https://tiktok.com/@lyscreation03" target="_blank">TikTok</a>
   </div>
-
-  <footer>© 2025 Lys Liliales 🌸 Tous droits réservés</footer>
-
 </body>
 </html>
+
 
 
 
