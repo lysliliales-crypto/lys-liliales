@@ -1,41 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lys creation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lys Liliales</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
     body {
-      background-color: #ffe6f2;
-      color: #444;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      padding: 100px 20px;
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(180deg, #ffe6f0, #fff);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      font-family: 'Great Vibes', cursive;
     }
+
+    /* زهرة الزنبق العلوية */
+    .lily {
+      position: absolute;
+      top: 0;
+      width: 300px;
+      opacity: 0.8;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
     h1 {
-      color: #e48cb4;
-      font-size: 2.5em;
+      margin-top: 160px;
+      font-size: 60px;
+      color: #d474a2;
+      text-shadow: 1px 1px 4px #f3d1e5;
+      animation: fadeIn 2s ease;
     }
-    a {
-      display: block;
-      margin: 10px;
-      color: #e48cb4;
-      text-decoration: none;
-      font-weight: bold;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    a:hover {
-      text-decoration: underline;
+
+    .links {
+      display: flex;
+      gap: 25px;
+      margin-top: 40px;
+      animation: fadeIn 3s ease;
     }
+
+    .flower-btn {
+      background: #f8b8d8;
+      border: none;
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .flower-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    /* بتلات زهرية حول الأزرار */
+    .flower-btn::before, .flower-btn::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: #ffd6e8;
+      width: 20px;
+      height: 20px;
+      top: -10px;
+      left: 35px;
+      box-shadow: 25px 25px #ffd6e8, -25px 25px #ffd6e8, 25px -25px #ffd6e8, -25px -25px #ffd6e8;
+      z-index: -1;
+      transition: all 0.3s ease;
+    }
+
+    .flower-btn:hover::before {
+      transform: rotate(20deg);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      color: #d6a0b9;
+      font-size: 18px;
+    }
+
+    /* كادرات وستيكرات جانبية */
+    .decor {
+      position: absolute;
+      opacity: 0.4;
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .decor.left { left: 20px; bottom: 50px; width: 120px; }
+    .decor.right { right: 20px; top: 100px; width: 130px; }
   </style>
 </head>
 <body>
-  <h1>🌸 Welcome to Lys creation 🌸</h1>
-  <p>Creation de cadres, stickers & cadeaux personnalisés</p>
-  <a href="https://www.facebook.com/share/1J3rsf5M64/">Facebook</a>
-  <a href="https://www.instagram.com/creation.de.lys">Instagram</a>
-  <a href="https://tiktok.com/@lyscreation03">TikTok</a>
+  <img class="lily" src="https://i.imgur.com/rycM6i7.png" alt="Lys flower" />
+  <h1>Lys Liliales</h1>
+
+  <div class="links">
+    <a href="https://www.facebook.com/share/1J3rsf5M64/" target="_blank"><button class="flower-btn">FB</button></a>
+    <a href="https://www.instagram.com/creation.de.lys?igsh=MXcxNHcyYjEzZGhoZw==" target="_blank"><button class="flower-btn">IG</button></a>
+    <a href="https://tiktok.com/@lyscreation03" target="_blank"><button class="flower-btn">TT</button></a>
+  </div>
+
+  <img class="decor left" src="https://i.imgur.com/qI5Uu8q.png" alt="cadre décoratif">
+  <img class="decor right" src="https://i.imgur.com/qI5Uu8q.png" alt="sticker décoratif">
+
+  <footer>🌸 Création artistique & douce – Lys Liliales 🌸</footer>
 </body>
 </html>
+
 
 
       
