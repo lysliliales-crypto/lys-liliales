@@ -1,0 +1,140 @@
+<!--
+Single-file landing page for "Lys liliales"
+How to use:
+1) Save this file as `index.html`.
+2) Upload it to your GitHub repository (lys-liliales) or any static host.
+3) If using GitHub Pages: push to main branch, then Settings → Pages → Branch: main → / (root).
+
+This file contains inline CSS and an embedded SVG lily so no external images are required.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lys liliales</title>
+  <meta name="description" content="Lys liliales — feminine and delicate creations: frames, stickers & personalized gifts inspired by the elegance of lilies. 🌸">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink:#fdeef6; /* very soft pink background */
+      --accent:#f7cfe3; /* button subtle color */
+      --deep:#eaa7c9; /* deeper pink for hover */
+      --text:#342634;
+      --glass: rgba(255,255,255,0.6);
+      --radius:18px;
+      --card-w: min(520px, 92vw);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, var(--pink) 0%, #fff 60%);
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
+    }
+    .card{
+      width:var(--card-w);
+      background:linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.9));
+      border-radius:calc(var(--radius) + 4px);
+      box-shadow: 0 10px 30px rgba(60,20,40,0.08);
+      padding:36px;
+      text-align:center;
+      backdrop-filter: blur(6px) saturate(120%);
+    }
+
+    .brand{
+      font-family:'Playfair Display', serif;
+      font-size:28px;
+      letter-spacing:0.6px;
+      margin:0 0 6px 0;
+      color:#3b2b33;
+    }
+    .tag{
+      margin:0 0 18px 0;
+      font-size:14px;
+      color:#6b5460;
+      opacity:0.9;
+    }
+
+    /* central lily */
+    .lily-wrap{display:flex;justify-content:center;margin:6px 0 22px}
+    .lily{
+      width:200px;max-width:46vw;height:auto;display:block;
+      filter: drop-shadow(0 6px 18px rgba(230,150,180,0.12));
+    }
+
+    .buttons{display:flex;flex-direction:column;gap:12px;align-items:center;margin-top:8px}
+    .btn{
+      width:100%;max-width:360px;
+      display:inline-flex;align-items:center;gap:12px;justify-content:center;
+      padding:12px 18px;border-radius:12px;border:none;cursor:pointer;text-decoration:none;
+      background:var(--glass);font-weight:600;color:var(--text);
+      transition:all .18s ease;box-shadow:0 6px 14px rgba(100,40,60,0.06);
+      backdrop-filter: blur(4px);
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(120,50,90,0.08)}
+    .btn--accent{background:linear-gradient(90deg,var(--accent),#ffeef7);}
+    .btn--accent:hover{background:linear-gradient(90deg,var(--deep),#ffdff0)}
+
+    .small{font-size:13px;color:#7a5f6a;margin-top:18px}
+
+    /* footer */
+    .footer{margin-top:20px;font-size:12px;color:#8a6f7b}
+
+    @media (min-width:760px){
+      .brand{font-size:34px}
+      .lily{width:240px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <h1 class="brand">Lys liliales</h1>
+    <p class="tag">Feminine & delicate creations — frames, stickers & personalized gifts inspired by lilies.</p>
+
+    <div class="lily-wrap" aria-hidden="true">
+      <!-- Stylized lily SVG (pink/white) as the central element -->
+      <svg class="lily" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pink lily illustration">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="#fff6fb"/>
+            <stop offset="100%" stop-color="#ffdff2"/>
+          </linearGradient>
+          <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="#ffdff2"/>
+            <stop offset="100%" stop-color="#f8bfd6"/>
+          </linearGradient>
+        </defs>
+        <g transform="translate(150,150) scale(0.9)">
+          <path d="M-10,-20 C-40,-70 -80,-100 -110,-75 C-80,-60 -55,-30 -10,-20 Z" fill="url(#g2)" opacity="0.98"/>
+          <path d="M20,-10 C60,-70 110,-90 140,-60 C110,-50 65,-20 20,-10 Z" fill="url(#g2)" opacity="0.98"/>
+          <path d="M-30,0 C-70,20 -100,70 -80,110 C-50,90 -35,45 -30,0 Z" fill="url(#g1)" opacity="0.97"/>
+          <path d="M40,10 C90,30 120,80 100,120 C70,95 45,55 40,10 Z" fill="url(#g1)" opacity="0.97"/>
+          <ellipse cx="0" cy="30" rx="28" ry="18" fill="#f9d0e0" opacity="0.95"/>
+          <circle cx="0" cy="34" r="5" fill="#b25a76"/>
+          <!-- stamen -->
+          <g transform="translate(-8,6)">
+            <rect x="-2" y="-18" width="4" height="24" rx="2" fill="#d37a98" transform="rotate(-12)"/>
+            <rect x="12" y="-16" width="4" height="22" rx="2" fill="#d37a98" transform="rotate(10)"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="buttons" role="navigation" aria-label="Social links">
+      <a class="btn btn--accent" href="https://www.instagram.com/creation.de.lys?igsh=MXcxNHcyYjEzZGhoZw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸 Instagram</a>
+      <a class="btn" href="https://www.facebook.com/share/1J3rsf5M64/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘 Facebook</a>
+      <a class="btn" href="https://www.tiktok.com/@lyscreation03" target="_blank" rel="noopener noreferrer" aria-label="TikTok">🎵 TikTok</a>
+    </div>
+
+    <p class="small">Custom orders — frames, stickers, packaging & event favors. DM on social for pricing and commissions.</p>
+    <p class="footer">© Lys liliales — All rights reserved</p>
+  </main>
+</body>
+</html>
