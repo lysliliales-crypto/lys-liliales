@@ -5,102 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lys Liliales</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300&display=swap');
+
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Poppins', cursive;
-      background: linear-gradient(to bottom right, #ffe6f2, #ffd6eb);
-      color: #4a2c36;
-      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #ffe6f2 0%, #fff8fb 100%);
       overflow-x: hidden;
-      animation: fadeIn 2s ease-in-out;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+      position: relative;
+      min-height: 100vh;
     }
 
     h1 {
-      font-family: "Brush Script MT", cursive;
-      font-size: 3em;
-      margin-top: 70px;
-      color: #d63384;
-      animation: floatIn 2s ease-in-out;
+      font-family: 'Great Vibes', cursive;
+      font-size: 60px;
+      color: #d84f87;
+      margin-top: 100px;
+      animation: float 4s ease-in-out infinite;
     }
 
     p {
-      font-size: 1.2em;
-      color: #6d4c55;
-      margin-bottom: 40px;
-      animation: fadeIn 2.5s ease-in;
+      font-size: 18px;
+      color: #b45a7e;
+      margin-top: -10px;
+      margin-bottom: 60px;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     .links a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      font-size: 1.1em;
-      text-decoration: none;
+      background-color: #f7b6ce;
       color: white;
-      background-color: #d63384;
+      text-decoration: none;
+      padding: 12px 30px;
       border-radius: 30px;
-      transition: all 0.3s ease;
-      animation: fadeInUp 2s ease;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 4px 10px rgba(216, 79, 135, 0.2);
     }
 
     .links a:hover {
-      background-color: #ff77c5;
-      transform: scale(1.1);
+      background-color: #d84f87;
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(216, 79, 135, 0.3);
     }
 
+    /* 🌸 زهور الزنبق */
     .flower {
       position: absolute;
-      width: 120px;
-      opacity: 0.9;
-      animation: float 6s ease-in-out infinite;
+      width: 200px;
+      opacity: 0.85;
+      animation: float 5s ease-in-out infinite;
     }
 
     .flower.left {
-      top: 10%;
       left: -40px;
+      top: 30%;
+      transform: rotate(-5deg);
     }
 
     .flower.right {
-      bottom: 10%;
       right: -40px;
-      animation-delay: 2s;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0px); }
+      top: 30%;
+      transform: rotate(5deg);
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    @keyframes floatIn {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 14px;
+      color: #c07296;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
-  <img src="https://i.imgur.com/q8xvcnk.png" class="flower left" alt="Fleur Lys">
-  <img src="https://i.imgur.com/q8xvcnk.png" class="flower right" alt="Fleur Lys">
+
+  <!-- 🌸 زهور الجوانب -->
+  <img src="https://i.imgur.com/wJrkrKw.png" alt="Lys Flower Left" class="flower left">
+  <img src="https://i.imgur.com/wJrkrKw.png" alt="Lys Flower Right" class="flower right">
 
   <h1>Lys Liliales</h1>
-  <p>Création de cadres, stickers et cadeaux personnalisés 🌸</p>
+  <p>Créations de cadres, stickers & cadeaux personnalisés</p>
 
   <div class="links">
     <a href="https://www.facebook.com/share/1J3rsf5M64/" target="_blank">Facebook</a>
     <a href="https://www.instagram.com/creation.de.lys?igsh=MXcxNHcyYjEzZGhoZw==" target="_blank">Instagram</a>
-    <a href="https://tiktok.com/@lyscreation03" target="_blank">TikTok</a>
+    <a href="https://www.tiktok.com/@lyscreation03" target="_blank">TikTok</a>
   </div>
+
+  <footer>© 2025 Lys Liliales 🌸 Tous droits réservés</footer>
+
 </body>
 </html>
 
