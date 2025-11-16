@@ -1,38 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lys creation</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lys Création</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cinzel&display=swap" rel="stylesheet">
+
+<style>
+    /* خلفية فينتاج بدون صور خارجية */
     body {
-      background-color: #ffe6f2;
-      color: #444;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      padding: 100px 20px;
+        margin: 0;
+        padding: 0;
+        font-family: "Playfair Display", serif;
+        background: #e8dcc4;
+        background-image:
+            linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.05) 100%),
+            repeating-linear-gradient(0deg, #e9dfcb 0px, #e9dfcb 2px, #e1d3bc 2px, #e1d3bc 4px);
+        background-size: cover;
+        color: #4b3b2a;
     }
+
+    .card {
+        width: 90%;
+        max-width: 470px;
+        margin: 50px auto;
+        padding: 40px 35px;
+        background: #f9f1e2;
+        border: 3px solid #a68b6a;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        position: relative;
+        text-align: center;
+    }
+
     h1 {
-      color: #e48cb4;
-      font-size: 2.5em;
+        font-family: "Cinzel", serif;
+        font-size: 32px;
+        color: #3b2d20;
+        margin-bottom: 5px;
     }
-    a {
-      display: block;
-      margin: 10px;
-      color: #e48cb4;
-      text-decoration: none;
-      font-weight: bold;
+
+    .subtitle {
+        font-size: 14px;
+        color: #6e5a45;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .description {
+        font-size: 15px;
+        margin: 10px 0 25px;
+        color: #5b4a34;
+        line-height: 1.5;
     }
-  </style>
+
+    .link-btn {
+        display: block;
+        margin: 10px 0;
+        padding: 12px;
+        background: #d8c5a9;
+        color: #3b2d20;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 6px;
+        border: 1px solid #a88c6e;
+        transition: 0.3s;
+    }
+
+    .link-btn:hover {
+        background: #c9b190;
+    }
+
+    /* زخارف قديمة (SVG) بلا صور خارجية */
+    .corner {
+        width: 55px;
+        position: absolute;
+        fill: #a68b6a;
+        opacity: 0.55;
+    }
+
+    .top-left { top: 10px; left: 10px; transform: rotate(0deg); }
+    .top-right { top: 10px; right: 10px; transform: rotate(90deg); }
+    .bottom-right { bottom: 10px; right: 10px; transform: rotate(180deg); }
+    .bottom-left { bottom: 10px; left: 10px; transform: rotate(270deg); }
+
+</style>
 </head>
+
 <body>
-  <h1>🌸Welcome to Lys creation🌸</h1>
-  <p>Creation de cadres, stickers & cadeaux personnalisés</p>
-  <a href="https://www.facebook.com/share/1J3rsf5M64/">Facebook</a>
-  <a href="https://www.instagram.com/creation.de.lys">Instagram</a>
-  <a href="https://tiktok.com/@lyscreation03">TikTok</a>
+
+<div class="card">
+
+    <!-- زخارف -->
+    <svg class="corner top-left" viewBox="0 0 100 100">
+        <path d="M10,60 Q40,20 90,10" stroke-width="5" stroke="#a68b6a" fill="none"/>
+    </svg>
+
+    <svg class="corner top-right" viewBox="0 0 100 100">
+        <path d="M10,60 Q40,20 90,10" stroke-width="5" stroke="#a68b6a" fill="none"/>
+    </svg>
+
+    <svg class="corner bottom-right" viewBox="0 0 100 100">
+        <path d="M10,60 Q40,20 90,10" stroke-width="5" stroke="#a68b6a" fill="none"/>
+    </svg>
+
+    <svg class="corner bottom-left" viewBox="0 0 100 100">
+        <path d="M10,60 Q40,20 90,10" stroke-width="5" stroke="#a68b6a" fill="none"/>
+    </svg>
+
+    <h1>Lys Création</h1>
+    <div class="subtitle">ART MURAL & DÉCOR PERSONNALISÉ</div>
+
+    <div class="description">
+        Création de cadres, stickers, illustrations décoratives et cadeaux personnalisés.<br>
+        Un univers vintage et chaleureux fait avec passion.
+    </div>
+
+    <a class="link-btn" href="https://www.facebook.com/share/1J3rsf5M64/">Facebook</a>
+    <a class="link-btn" href="https://www.instagram.com/creation.de.lys">Instagram</a>
+    <a class="link-btn" href="https://tiktok.com/@lyscreation03">TikTok</a>
+
+</div>
+
 </body>
 </html>
